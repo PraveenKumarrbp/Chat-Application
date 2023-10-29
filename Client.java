@@ -74,9 +74,9 @@ public class Client extends JFrame {
             public void keyReleased(KeyEvent e) {
         
                 if(e.getKeyCode() == 10){
-                    String contentTOSend=messageInput.getText();
-                    messageArea.append("Me:+contentTOsend+\n");
-                    out.println(contentTOSend);
+                    String contentToSend=messageInput.getText();
+                    messageArea.append("Me:"+"contentTosend+"\n");
+                    out.println(contentToSend);
                     out.flush();
                     messageInput.setText("");
                     messageInput.requestFocus();
@@ -108,17 +108,9 @@ public class Client extends JFrame {
         JScrollPane jScrollPane=new JScrollPane(messageArea);
         this.add(jScrollPane,BorderLayout.CENTER);
         this.add(messageInput,BorderLayout.SOUTH);
-
-
-        
-
+        this.setVisible(true);
     }
-        
-
-    
-    
-
-    public void StartReading(){  
+        public void StartReading(){  
         
                   Runnable r1=()->{                   
                     System.out.println("reader started...");
